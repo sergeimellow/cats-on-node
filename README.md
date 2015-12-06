@@ -1,2 +1,2 @@
 # cats-on-node
-cat meme generator web application.
+Cat meme generator web application.
