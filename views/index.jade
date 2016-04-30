@@ -3,5 +3,7 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  <a href="www.google.com"><img src="http://i0.kym-cdn.com/entries/icons/original/000/005/497/lenincat.jpg?1301802892"></a>
-  <script>client = require( 'google-images' );client.search( 'Chicken Teriyaki', function (err, images) {console.log(images)});</script>
+  a(href='/')
+    img.yolo420(src='#{next_image}')
+  
+
