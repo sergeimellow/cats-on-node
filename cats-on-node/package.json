@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
+    "build": "npm run browserify "
   },
   "dependencies": {
     "angular": "^1.5.0-beta.2",
@@ -13,7 +15,22 @@
     "express": "^4.13.3",
     "grunt": "^0.4.5",
     "jade": "~1.11.0",
+    "mongoose": "^4.4.14",
     "morgan": "^1.6.1",
+    "node-jsx": "^0.13.3",
+    "react": "^15.0.2",
     "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
+    "browserify": "~6.0.3",
+    "nodemon": "^1.2.1",
+    "reactify": "~0.14.0",
+    "uglify-js": "~2.4.15",
+    "watchify": "~2.0.0"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
   }
 }
