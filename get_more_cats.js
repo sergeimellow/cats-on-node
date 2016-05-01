@@ -11,6 +11,7 @@ var year = d.getFullYear();
 // console.log(day);
 // console.log(d);
 // function searches google images for new cat links and stores the links in mongodb
+// TODO store in mongodb and cronify
 function google_for_cats() {
 	var key = api_keys.cse_api_key();
 	var id = api_keys.cse_id();
@@ -20,8 +21,8 @@ function google_for_cats() {
 	// https://www.googleapis.com/customsearch/v1?key=YOUR_API_KEY&cx=YOUR_CSE_ID&q=flower&searchType=image&fileType=jpg&imgSize=small&alt=json
 	var full_request = "https://www.googleapis.com/customsearch/v1?key=" + key + "&cx=" + id + "&searchType=image" + "&q=" + query;
 	console.log(full_request);
-
+	//TODO. store links that don't exist in mongoDB
 	return 1;
 
 }
-google_for_cats();
+//google_for_cats();
